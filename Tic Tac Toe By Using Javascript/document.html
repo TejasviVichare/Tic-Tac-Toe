@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+     <!--Javascript-->
+     <script src="javascript.js"></script>
+     <!--CSS-->
+     <link rel="stylesheet" href="style.css">
+
+     <script src="https://kit.fontawesome.com/afe71c947f.js" crossorigin="anonymous"></script>
+    <style>
+      #popup-main{
+          visibility: hidden;
+        } 
+        .popup{
+            background-color: rgb(246, 232, 255);
+            width: 500px;
+            height:500px;
+            position: absolute;
+            z-index: 9999;
+            margin: 100px;
+            padding: 0px;
+            border-radius: 20px;
+        }
+        .container{          
+            z-index: -1;
+        }
+        #circle{
+            width: 40px;
+            height: 40px;
+            background-color: rgb(110, 109, 109);
+            float: right;
+            text-align: center;
+            border-radius: 50%;
+            margin-top: -15px;
+            margin-right: -10px;
+        }
+        .conrats-text{
+            text-align: center;
+            align-items: center;
+            height:auto;
+            margin-top: 150px;          
+            color: rgb(106, 40, 136);
+            font-weight: bolder;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+      <div class="row justify-content-center" id="popup-main">
+        <div class="popup" >
+            <div id="circle" >
+             <p onclick="closepopup()"><i class="fa-solid fa-2x fa-xmark"></i></p> 
+            </div>
+            <div class="conrats-text">
+                <p style="font-size: 48px;">Congratulations</p>
+                <p id="player-name" style="font-size: 30px;"></p>
+            </div>
+        </div>
+       </div>
+        <div class="container text-center">
+          
+           <h1>TIC TAC TOE</h1> <br>
+            <p id="ins">
+                Game starts by just Tap on
+                box<br><br>First Player starts as
+                <b>Player X </b>And Second Player as
+                <b>Player 0</b>
+            </p>
+            <br>
+            <div class="ui">
+                <div class="row justify-content-center">
+                    <input type="text" class="cell" id="b1" onclick="myfun();myfunc_3()">
+                    <input type="text" class="cell" id="b2" onclick="myfun();myfunc_4()">
+                    <input type="text" class="cell" id="b3" onclick="myfun();myfunc_5()">
+                </div>
+                <div class="row justify-content-center">
+                    <input type="text" class="cell" id="b4" onclick="myfun();myfunc_6()">
+                    <input type="text" class="cell" id="b5" onclick="myfun();myfunc_7()">
+                    <input type="text" class="cell" id="b6" onclick="myfun();myfunc_8()">
+                </div>
+                <div class="row justify-content-center">
+                    <input type="text" class="cell" id="b7" onclick="myfun();myfun_9()">
+                    <input type="text" class="cell" id="b8" onclick="myfun();myfunc_10()">
+                    <input type="text" class="cell" id="b9" onclick="myfun();myfunc_11()">
+                </div>
+            </div>
+            <div class="reset"><br><br>
+                <button class="btn" onclick="myfun_2()">Reset</button>
+            </div>
+            <br>
+            <div>
+                <p id="print"></p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
